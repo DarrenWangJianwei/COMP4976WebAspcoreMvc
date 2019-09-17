@@ -1,0 +1,21 @@
+@model IEnumerable<Process>
+
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <a 
+        asp-controller="Process"
+        asp-action="Display"
+        asp-route-id=@item.Id>
+        <li>@item.ProcessName</li>
+        </a>
+    }
+</ul>
+
+@Html.Partial("_BogusPartialView")

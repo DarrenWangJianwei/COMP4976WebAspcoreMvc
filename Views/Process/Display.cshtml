@@ -1,0 +1,12 @@
+@model  Process
+@{
+    ViewData["Title"] = "Display";
+}
+
+<h1>Display</h1>
+<p>name: @Model.ProcessName</p>
+<p>ID: @Model.Id</p>
+<p>Count: @Model.HandleCount</p>
+
+
+@Html.Partial("_BogusPartialView")
